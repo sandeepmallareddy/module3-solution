@@ -86,7 +86,7 @@
 	    //console.log("getting items");
 
 	    //Returns a promise foundItems
-	    var foundItems = MenuSearchService.getMatchedMenuItems('chicken');
+	    var foundItems = MenuSearchService.getMatchedMenuItems(list.searchTerm);
 
 	    //console.log(foundItems);
 	    
