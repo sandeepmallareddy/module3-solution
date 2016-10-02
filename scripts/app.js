@@ -109,7 +109,7 @@
 	    restrict: 'E',
 	    templateUrl:'foundItems.html',
 	    scope      :{
-		foundItems: '<'
+		items: '<'
 	    }
 	};
 	return ddo;
