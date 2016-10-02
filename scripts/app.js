@@ -73,7 +73,7 @@
 	list.empty = true;
 
 	//Declare a searchterm variable
-	list.searchTerm = 'hello';
+	list.searchTerm = '';
 	
 
 	 /** 
@@ -83,25 +83,44 @@
 	 **/
 
 	list.getItems = function(){
-	    //console.log("getting items");
+	    //If the search Item is empty
+	    if(searchTerm==''){
+		//Set the found array in the list with a empty array
+		list.found = [];
+		
+		//Check if found list is empty or not
+		list.checkIsFoundEmpty();
 
-	    //Returns a promise foundItems
+		return false;
+	    }
+	    
+
+	    //Search for searchItem and return a promise foundItems
 	    var foundItems = MenuSearchService.getMatchedMenuItems(list.searchTerm);
 
-	    //console.log(foundItems);
-	    
 	    foundItems.then(function(founditems){
-		//console.log(founditems);
+		//Set the found array in the list with the returned items
 		list.found = founditems;
 
 		//reset the searchTerm to blank
 		list.searchTerm = '';
+
+		//Check if found list is empty or not
+		list.checkIsFoundEmpty();
+		
 	    }).catch(function(error){
 		console.log(error);
 	    });
-
-
 	}
+
+	list.isFoundEmpty = function(){
+	    if(list.found.length > 0)
+		list.empty = false;
+	    else
+		list.empty = true;
+	}
+
+	
 	    
     }
 
