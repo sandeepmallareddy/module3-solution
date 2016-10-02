@@ -113,7 +113,10 @@
 	    });
 	}
 
-	list.isFoundEmpty = function(){
+	/** Function to check if the found variable(Array) is empty or not **/
+	/** Return true/false if it is empty/not empty                     **/
+
+	list.checkIsFoundEmpty = function(){
 	    if(list.found.length > 0)
 		list.empty = false;
 	    else
