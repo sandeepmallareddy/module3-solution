@@ -91,8 +91,11 @@
 	    //console.log(foundItems);
 	    
 	    foundItems.then(function(founditems){
-		console.log(founditems);
+		//console.log(founditems);
 		list.found = founditems;
+
+		//reset the searchTerm to blank
+		list.searchTerm = '';
 	    }).catch(function(error){
 		console.log(error);
 	    });
