@@ -88,10 +88,10 @@
 	    //Returns a promise foundItems
 	    var foundItems = MenuSearchService.getMatchedMenuItems('chicken');
 
-	    console.log(foundItems);
+	    //console.log(foundItems);
 	    
 	    foundItems.then(function(founditems){
-		//console.log(founditems);
+		console.log(founditems);
 		list.found = founditems;
 	    }).catch(function(error){
 		console.log(error);
@@ -106,19 +106,13 @@
     /** foundItemDirective **/
     function foundItemsDirective(){
 	var ddo = {
+	    restrict: 'E',
 	    templateUrl:'foundItems.html',
 	    scope      :{
 		foundItems: '<'
 	    }
 	};
 	return ddo;
-	
-
-
-
-
-
-
     }
 
 
