@@ -125,10 +125,10 @@
 
 
 	/** Function to remove an item based on the index **/
-	list.remove = function(index){
-	    console.log("removing ",index);
-	    list.found.splice(index,1);
-	    list.checkIsFoundEmpty();
+	list.remove = function(){
+	    console.log("removing ");
+	    //list.found.splice(index,1);
+	    //list.checkIsFoundEmpty();
 	    
 	}
 	    
@@ -142,7 +142,7 @@
 	    templateUrl:'foundItems.html',
 	    scope      :{
 		items: '<',
-		onRemove : '&'
+		//onRemove : '&'
 	    }
 	};
 	return ddo;
