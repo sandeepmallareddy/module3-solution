@@ -5,8 +5,8 @@
     <td> {{ item.name }} </td>
     <td> {{ item.short_name }} </td>
     <td> {{ item.description }} </td>
-    <td> Remove Item from List </td>
+    <td> <button class="btn btn-primary" ng-click="list.remove({index:$index})">Don't want this one!</button></td>
 
   </tr>
 </table>
-<div class="error" ng-if="{{items.length}}">Nothing Found!</div>
+<div class="error">Nothing Found!</div>

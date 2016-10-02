@@ -123,7 +123,11 @@
 		list.empty = true;
 	}
 
-	
+
+	/** Function to remove an item based on the index **/
+	list.remove = function(index){
+	    list.found.splice(index,1);
+	}
 	    
     }
 
@@ -134,7 +138,8 @@
 	    restrict: 'E',
 	    templateUrl:'foundItems.html',
 	    scope      :{
-		items: '<'
+		items: '<',
+		onRemove : '&'
 	    }
 	};
 	return ddo;
