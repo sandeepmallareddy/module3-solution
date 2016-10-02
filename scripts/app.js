@@ -73,7 +73,7 @@
 	list.empty = true;
 
 	//Declare a searchterm variable
-	list.searchTerm = '';
+	list.searchTerm = 'hello';
 	
 
 	 /** 
