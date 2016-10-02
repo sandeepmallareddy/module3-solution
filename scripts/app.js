@@ -126,7 +126,10 @@
 
 	/** Function to remove an item based on the index **/
 	list.remove = function(index){
+	    console.log("removing ",index);
 	    list.found.splice(index,1);
+	    list.checkIsFoundEmpty();
+	    
 	}
 	    
     }
