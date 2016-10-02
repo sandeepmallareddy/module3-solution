@@ -15,7 +15,7 @@
       <input type="text" placeholder="search term" class="form-control">
     </div>
     <div class="form-group narrow-button">
-      <button class="btn btn-primary" ng-click="narrow.getItems()">Narrow It Down For Me!</button>
+      <button class="btn btn-primary" ng-click="list.getItems()">Narrow It Down For Me!</button>
     </div>
 
     <span>
@@ -25,7 +25,7 @@
     <items-loader-indicator></items-loader-indicator>
 
     <!-- found-items should be implemented as a component -->
-    <found-items items="narrow.found"></found-items>
+    <found-items items="list.found"></found-items>
   </div>
 
 </body>
