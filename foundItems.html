@@ -7,7 +7,7 @@
     <td> {{ item.description }} </td>
 
     <td>
-      <button class="btn btn-primary" ng-click="list.remove()">
+      <button class="btn btn-primary" ng-click="list.removeItem({index:$index});">
 	Don't want this one!
       </button>
     </td>
