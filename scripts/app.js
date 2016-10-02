@@ -69,22 +69,22 @@
 	//Declare the found variable, which will store all the items matched against search term
 	list.found = [];
 
-	//Declare a empty variable, set to true if search textbox is empty or false if it is not
+	//Declare a empty variable, set to true if found is empty or false if it is not
 	list.empty = true;
 
-	//Declare a searchterm variable
+	//Declare a searchterm variable, it is two-way bound to the search TextBox
 	list.searchTerm = '';
 	
 
 	 /** 
 	  * Method getItems()
 	  * Invoked on 'Narrow It Down for Me' button click
-	  * Return : Sets the found variable with the list of found items from MenuSearchService
+	  * Return : Sets the 'found' variable with the list of found items from MenuSearchService
 	 **/
 
 	list.getItems = function(){
 	    //If the search Item is empty
-	    if(searchTerm==''){
+	    if(list.searchTerm==''){
 		//Set the found array in the list with a empty array
 		list.found = [];
 		
