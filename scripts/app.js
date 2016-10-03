@@ -154,6 +154,11 @@
     function foundItemsLink(scope,element){
 
 	scope.$watch('items',function(oldvalue,newvalue){
+	    console.log(oldvalue);
+	    console.log(newvalue);
+
+
+
 	    //If the newValue length becomes 0, show Not Found! warning
 	    if(newvalue.length == 0)
 		console.log("Showing Warning");
