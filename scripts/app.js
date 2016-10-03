@@ -152,6 +152,19 @@
 
     /** Link function to foundItem Directive **/
     function foundItemsLink(scope,element){
+
+	scope.$watch('items',function(oldvalue,newvalue){
+	    //If the newValue length becomes 0, show Not Found! warning
+	    if(newvalue.length == 0)
+		console.log("Showing Warning");
+		//showWarning()
+	    else
+		console.log("Hiding Warning");
+		//hideWarning()
+	})
+
+
+	
 	console.log(scope);
 	console.log(element);
 
