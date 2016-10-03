@@ -24,8 +24,8 @@
 
     <!-- found-items should be implemented as a component -->
     <found-items items="list.found" on-remove="list.removeItem(index)" ></found-items>
-    <div ng-if="list.checkIsFoundEmpty()" class="error">Not Found</div>
-    <span> {{list.checkIsFoundEmpty()}} </span>
+    <div ng-if="list.checkIsFoundEmpty()" class="alert alert-warning">Not Found</div>
+    
    </div>
 
 </body>
