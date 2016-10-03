@@ -69,9 +69,6 @@
 	//Declare the found variable, which will store all the items matched against search term
 	list.found = [];
 
-	//Declare a empty variable, set to true if found is empty or false if it is not
-	list.empty = true;
-
 	//Declare a searchterm variable, it is two-way bound to the search TextBox
 	list.searchTerm = '';
 	
@@ -87,9 +84,6 @@
 	    if(list.searchTerm==''){
 		//Set the found array in the list with a empty array
 		list.found = [];
-		
-		//Check if found list is empty or not
-		//list.checkIsFoundEmpty();
 
 		return false;
 	    }
@@ -105,11 +99,8 @@
 		//reset the searchTerm to blank
 		list.searchTerm = '';
 
-		//Check if found list is empty or not
-		//list.checkIsFoundEmpty();
-		
 	    }).catch(function(error){
-		console.log(error);
+		console.log("Error: ",error);
 	    });
 	}
 
@@ -128,8 +119,6 @@
 	list.removeItem = function(index){
 	    console.log("removing ");
 	    list.found.splice(index,1);
-	    list.checkIsFoundEmpty();
-	    
 	}
 	    
     }
@@ -144,46 +133,11 @@
 		items: '<',
 		onRemove : '&',
 	    },
-	    link: foundItemsLink,
+	    
 	};
 	return ddo;
     }
 
 
-    /** Link function to foundItem Directive **/
-    function foundItemsLink(scope,element){
-
-	scope.$watch('items',function(oldvalue,newvalue){
-	    console.log(oldvalue);
-	    console.log(newvalue);
-
-
-
-	    //If the newValue length becomes 0, show Not Found! warning
-	    if(newvalue.length == 0)
-		console.log("Showing Warning");
-		//showWarning()
-	    else
-		console.log("Hiding Warning");
-		//hideWarning()
-	})
-
-
-	
-	console.log(scope);
-	console.log(element);
-
-
-
-
-
-
-
-    }
-
-
-
-    
-    
-	
+    	
 })()
