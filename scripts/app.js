@@ -89,7 +89,7 @@
 		list.found = [];
 		
 		//Check if found list is empty or not
-		list.checkIsFoundEmpty();
+		//list.checkIsFoundEmpty();
 
 		return false;
 	    }
@@ -106,7 +106,7 @@
 		list.searchTerm = '';
 
 		//Check if found list is empty or not
-		list.checkIsFoundEmpty();
+		//list.checkIsFoundEmpty();
 		
 	    }).catch(function(error){
 		console.log(error);
@@ -118,9 +118,9 @@
 
 	list.checkIsFoundEmpty = function(){
 	    if(list.found.length > 0)
-		list.empty = false;
+		return false;
 	    else
-		list.empty = true;
+		return true;
 	}
 
 
