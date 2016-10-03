@@ -127,8 +127,8 @@
 	/** Function to remove an item based on the index **/
 	list.removeItem = function(index){
 	    console.log("removing ");
-	    //list.found.splice(index,1);
-	    //list.checkIsFoundEmpty();
+	    list.found.splice(index,1);
+	    list.checkIsFoundEmpty();
 	    
 	}
 	    
