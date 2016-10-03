@@ -143,12 +143,29 @@
 	    scope      :{
 		items: '<',
 		onRemove : '&',
-	    }
+	    },
+	    link: foundItemsLink,
 	};
 	return ddo;
     }
 
 
+    /** Link function to foundItem Directive **/
+    function foundItemsLink(scope,element){
+	console.log(scope);
+	console.log(element);
+
+
+
+
+
+
+
+    }
+
+
+
+    
     
 	
 })()
